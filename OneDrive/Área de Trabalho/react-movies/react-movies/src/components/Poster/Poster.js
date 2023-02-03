@@ -1,3 +1,3 @@
-export function Poster(props) {
-  return <img src={props.image} alt="" />;
+export function Poster({ path }) {
+  return <img src={`https://image.tmdb.org/t/p/w500/${path}`} alt="poster" />;
 }

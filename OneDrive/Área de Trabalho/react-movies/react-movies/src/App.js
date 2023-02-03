@@ -1,10 +1,19 @@
+import data from "./Assets/movies";
 import "./App.css";
-import { Section } from "./Section/section";
+import { useState } from "react";
+import { Card } from "./components/Card/Card";
 
 function App() {
+  const [movies, setMovies] = useState(data);
   return (
     <div className="App">
-      <Section />
+      {movies.map((movie) => {
+        return (
+          <div>
+            <Card Filme={movie} />
+          </div>
+        );
+      })}
     </div>
   );
 }
